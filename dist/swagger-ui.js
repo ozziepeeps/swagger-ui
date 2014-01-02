@@ -1146,7 +1146,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div>\r\n<ul class=\"signature-nav\">\r\n    <li><a class=\"description-link\" href=\"#\">Model</a></li>\r\n    <li><a class=\"snippet-link\" href=\"#\">Model Schema</a></li>\r\n</ul>\r\n<div>\r\n\r\n<div class=\"signature-container\">\r\n    <div class=\"description\">\r\n        ";
+  buffer += "<div>\r\n<ul class=\"signature-nav\">\r\n    <li><a class=\"description-link\" href=\"#\">Model</a></li>\r\n    <li><a class=\"snippet-link\" href=\"#\">Sample</a></li>\r\n</ul>\r\n<div>\r\n\r\n<div class=\"signature-container\">\r\n    <div class=\"description\">\r\n        ";
   if (stack1 = helpers.signature) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.signature; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
