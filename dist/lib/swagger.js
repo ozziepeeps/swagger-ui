@@ -549,6 +549,7 @@
     function SwaggerModelProperty(name, obj) {
       this.name = name;
       this.dataType = obj.type || obj.dataType || obj["$ref"];
+	  this.sample = obj.sample;
       this.isCollection = this.dataType && (this.dataType.toLowerCase() === 'array' || this.dataType.toLowerCase() === 'list' || this.dataType.toLowerCase() === 'set');
       this.descr = obj.description;
       this.required = obj.required;
@@ -584,6 +585,8 @@
       } else {
         if (this.isCollection) {
           result = this.refDataType;
+		} else if (this.sample) {
+		  result = this.sample;
         } else {
           result = this.dataType;
         }
