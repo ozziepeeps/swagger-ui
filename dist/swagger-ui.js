@@ -352,7 +352,7 @@ function program9(depth0,data) {
 function program11(depth0,data) {
   
   
-  return "\r\n          <div class='sandbox_header'>\r\n            <input class='submit' name='commit' type='button' value='Try it out!' />\r\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\r\n            <img alt='Throbber' class='response_throbber' src='images/throbber.gif' style='display:none' />\r\n          </div>\r\n          ";
+  return "\r\n          <div class='sandbox_header'>\r\n            <input class='submit' name='commit' type='button' value='Try it out!' />\r\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\r\n            <img alt='Throbber' class='response_throbber' src='/images/throbber.gif' style='display:none' />\r\n          </div>\r\n          ";
   }
 
   buffer += "\r\n  <ul class='operations' >\r\n    <li class='";
