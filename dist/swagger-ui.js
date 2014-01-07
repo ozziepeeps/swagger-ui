@@ -1465,9 +1465,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
       };
       contentTypeModel.consumes = this.model.consumes;
       contentTypeModel.produces = this.model.produces;
-      _ref = this.model.parameters;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        param = _ref[_i];
+      _ref5 = this.model.parameters;
+      for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
+        param = _ref5[_i];
         type = param.type || param.dataType;
         if (type.toLowerCase() === 'file') {
           if (!contentTypeModel.consumes) {
