@@ -340,19 +340,19 @@ function program5(depth0,data) {
 function program7(depth0,data) {
   
   
-  return "\r\n          <div style='margin:0;padding:0;display:inline'></div>\r\n          <h4>Possible Error Codes</h4>\r\n          <table class='fullwidth'>\r\n            <thead>\r\n            <tr>\r\n              <th>HTTP Status Code</th>\r\n              <th>Reason</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody class=\"operation-status\">\r\n            \r\n            </tbody>\r\n          </table>\r\n          ";
+  return "\r\n          ";
   }
 
 function program9(depth0,data) {
   
   
-  return "\r\n          ";
+  return "\r\n          <div class='sandbox_header'>\r\n            <input class='submit' name='commit' type='button' value='Try it out!' />\r\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\r\n            <img alt='Throbber' class='response_throbber' src='/images/throbber.gif' style='display:none' />\r\n          </div>\r\n          ";
   }
 
 function program11(depth0,data) {
   
   
-  return "\r\n          <div class='sandbox_header'>\r\n            <input class='submit' name='commit' type='button' value='Try it out!' />\r\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\r\n            <img alt='Throbber' class='response_throbber' src='/images/throbber.gif' style='display:none' />\r\n          </div>\r\n          ";
+  return "\r\n          <h4>Possible Error Codes</h4>\r\n          <table class='fullwidth'>\r\n            <thead>\r\n            <tr>\r\n              <th>HTTP Status Code</th>\r\n              <th>Reason</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody class=\"operation-status\">\r\n            \r\n            </tbody>\r\n          </table>\r\n          ";
   }
 
   buffer += "\r\n  <ul class='operations' >\r\n    <li class='";
@@ -461,12 +461,12 @@ function program11(depth0,data) {
   stack1 = helpers['if'].call(depth0, depth0.parameters, {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n          ";
-  stack1 = helpers['if'].call(depth0, depth0.responseMessages, {hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data});
+  stack1 = helpers['if'].call(depth0, depth0.isReadOnly, {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n          ";
-  stack1 = helpers['if'].call(depth0, depth0.isReadOnly, {hash:{},inverse:self.program(11, program11, data),fn:self.program(9, program9, data),data:data});
+  buffer += "\r\n        </form>\r\n        <div class='response' style='display:none'>\r\n          <h4>Request URL</h4>\r\n          <div class='block request_url'></div>\r\n          <h4>Response Body</h4>\r\n          <div class='block response_body'></div>\r\n          <h4>Response Code</h4>\r\n          <div class='block response_code'></div>\r\n          <h4>Response Headers</h4>\r\n          <div class='block response_headers'></div>\r\n		            ";
+  stack1 = helpers['if'].call(depth0, depth0.responseMessages, {hash:{},inverse:self.noop,fn:self.program(11, program11, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n        </form>\r\n        <div class='response' style='display:none'>\r\n          <h4>Request URL</h4>\r\n          <div class='block request_url'></div>\r\n          <h4>Response Body</h4>\r\n          <div class='block response_body'></div>\r\n          <h4>Response Code</h4>\r\n          <div class='block response_code'></div>\r\n          <h4>Response Headers</h4>\r\n          <div class='block response_headers'></div>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </ul>\r\n";
+  buffer += "\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </ul>\r\n";
   return buffer;
   });
 })();

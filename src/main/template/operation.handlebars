@@ -46,21 +46,6 @@
           </tbody>
           </table>
           {{/if}}
-          {{#if responseMessages}}
-          <div style='margin:0;padding:0;display:inline'></div>
-          <h4>Possible Error Codes</h4>
-          <table class='fullwidth'>
-            <thead>
-            <tr>
-              <th>HTTP Status Code</th>
-              <th>Reason</th>
-            </tr>
-            </thead>
-            <tbody class="operation-status">
-            
-            </tbody>
-          </table>
-          {{/if}}
           {{#if isReadOnly}}
           {{else}}
           <div class='sandbox_header'>
@@ -79,6 +64,20 @@
           <div class='block response_code'></div>
           <h4>Response Headers</h4>
           <div class='block response_headers'></div>
+		            {{#if responseMessages}}
+          <h4>Possible Error Codes</h4>
+          <table class='fullwidth'>
+            <thead>
+            <tr>
+              <th>HTTP Status Code</th>
+              <th>Reason</th>
+            </tr>
+            </thead>
+            <tbody class="operation-status">
+            
+            </tbody>
+          </table>
+          {{/if}}
         </div>
       </div>
     </li>
